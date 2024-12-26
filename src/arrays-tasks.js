@@ -145,7 +145,7 @@ function getAverage(arr) {
  */
 function isSameLength(arr) {
   const firstLen = arr[0].length;
-  
+  return arr.every((element) => element.length === firstLen);
 }
 
 /**
