@@ -121,8 +121,16 @@ function getStringsLength(arr) {
  *   getAverage([ 1, 10, 100, 1000 ])  => 277,75
  *   getAverage([ 2, 3, 3 ])  => 2,67
  */
-function getAverage(/* arr */) {
-  throw new Error('Not implemented');
+function getAverage(arr) {
+  if (arr.length === 0) return 0;
+  const initialValue = 0;
+  const sumWithInitial = arr.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+  );
+  const average = sumWithInitial / arr.length;
+  const roundedAverage = parseFloat(average.toFixed(2));
+  return roundedAverage;
 }
 
 /**
@@ -135,8 +143,9 @@ function getAverage(/* arr */) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  const firstLen = arr[0].length;
+  
 }
 
 /**
